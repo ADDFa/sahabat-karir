@@ -1,0 +1,272 @@
+:root {
+    --tinggi-header: 80px;
+
+    --font-bold: montserrat_alternatesbold;
+}
+
+body {
+    max-width: 1920px;
+    margin: auto;
+    height: 2000px;
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------------------------
+*/
+header {
+    width: 100%;
+    height: var(--tinggi-header);
+    position: sticky;
+    top: 0;
+    transition: .3s;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.header-shadow {
+    box-shadow: 0 1px 5px 0 rgba(153, 153, 153, .4);
+}
+
+/* ? Logo */
+.sahabat-karir-logo img {
+    height: calc(var(--tinggi-header) - 20px);
+}
+
+/* ? Navigasi */
+.navigasi-halaman-landing {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.navigasi-halaman-landing a {
+    margin-right: 20px;
+}
+
+/* ? Pencarian */
+.pencarian {
+    width: calc(60% - var(--tinggi-header));
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pencarian input {
+    width: 100%;
+    max-height: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(153, 153, 153, .5);
+}
+
+.pencarian input:focus {
+    outline: 2px solid rgba(7, 121, 228, .5);
+}
+
+.pencarian svg {
+    position: absolute;
+    fill: #0779e4;
+    width: 20px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.pencarian svg:hover {
+    cursor: pointer;
+    fill: rgba(7, 121, 228, .7);
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Desktop
+ * ----------------------------------------------------------------------------------------------
+*/
+@media screen and (min-width:992px) {
+
+    /* ----------------------------------------------------------------------------------------------
+     * Header
+     * ----------------------------------------------------------------------------------------------
+    */
+    /* ? Logo */
+    .sahabat-karir-logo {
+        width: var(--tinggi-header);
+    }
+
+    .hamburger-navigasi {
+        display: none;
+    }
+
+    /* ? Navigasi */
+    .navigasi-halaman-landing a {
+        background-image: linear-gradient(transparent 0%,
+                transparent 90%,
+                rgba(7, 121, 228, .5) 90%,
+                rgba(7, 121, 228, .5) 100%);
+
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        background-position-X: right;
+        transition: background-size 300ms;
+    }
+
+    .navigasi-halaman-landing a:hover {
+        background-size: 100% 100%;
+        background-position-x: left;
+        color: #0779e4;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Tab & Desktop
+ * ----------------------------------------------------------------------------------------------
+*/
+@media screen and (min-width:768px) {
+
+    /* ----------------------------------------------------------------------------------------------
+     * Header
+     * ----------------------------------------------------------------------------------------------
+    */
+    header {
+        display: flex;
+    }
+
+    /* ? Pencarian */
+    .pencarian input {
+        border-radius: 10px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Tab
+ * ----------------------------------------------------------------------------------------------
+*/
+@media screen and (min-width:768px) and (max-width:992px) {
+
+    /* ----------------------------------------------------------------------------------------------
+     * Header
+     * ----------------------------------------------------------------------------------------------
+    */
+    header {
+        justify-content: space-between;
+    }
+
+    /* ? Logo */
+    .sahabat-karir-logo {
+        order: 1;
+    }
+
+    /* ? Navigasi */
+    .navigasi-halaman-landing {
+        width: 50%;
+        order: 3;
+    }
+
+    /* ? Pencarian */
+    .pencarian {
+        order: 2;
+        width: 80%;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Tab & Mobile
+ * ----------------------------------------------------------------------------------------------
+*/
+@media screen and (max-width:992px) {
+
+    /* ----------------------------------------------------------------------------------------------
+     * Header
+     * ----------------------------------------------------------------------------------------------
+    */
+    /* ? Navigasi */
+    .navigasi-halaman-landing {
+        height: 0;
+        position: absolute;
+        top: var(--tinggi-header);
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: .3s;
+        border-bottom-left-radius: 10px;
+        box-shadow: 0 0 5px 0 rgba(153, 153, 153, .5);
+    }
+
+    /* Kelas Semu Navigasi */
+    .lihat-navigasi {
+        height: 150px;
+        padding: 20px;
+    }
+
+    .navigasi-halaman-landing a {
+        display: block;
+        width: fit-content;
+    }
+
+    /* ? Hamburger Navigasi */
+    .hamburger-navigasi {
+        display: initial;
+        order: 4;
+        width: min-content;
+    }
+
+    .hamburger-navigasi svg {
+        width: 28px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Mobile
+ * ----------------------------------------------------------------------------------------------
+*/
+@media screen and (max-width:768px) {
+
+    /* ----------------------------------------------------------------------------------------------
+     * Header
+     * ----------------------------------------------------------------------------------------------
+    */
+    header {
+        display: grid;
+        grid-template-areas:
+            'logo hamburger'
+            'pencarian pencarian'
+        ;
+    }
+
+    /* ? Logo */
+    .sahabat-karir-logo {
+        grid-area: logo;
+    }
+
+    /* ? Pencarian */
+    .pencarian {
+        width: 80%;
+        grid-area: pencarian;
+        justify-self: end;
+        margin-top: 10px;
+    }
+
+    /* ? Navigasi */
+    .navigasi-halaman-landing {
+        width: 80%;
+        z-index: 99;
+    }
+
+    /* ? Hamburger Navigasi */
+    .hamburger-navigasi {
+        grid-area: hamburger;
+        justify-self: end;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Footer
+ * ----------------------------------------------------------------------------------------------
+*/
