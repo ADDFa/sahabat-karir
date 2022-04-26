@@ -1,0 +1,52 @@
+:root {
+    --tinggi-header: 80px;
+
+    --font-bold: montserrat_alternatesbold;
+}
+
+/* ----------------------------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------------------------
+*/
+body {
+    max-width: 1920px;
+    margin: auto;
+    height: 2000px;
+}
+
+header {
+    width: 100%;
+    height: var(--tinggi-header);
+    position: sticky;
+    top: 0;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: red;
+}
+
+.header-shadow {
+    box-shadow: 0 1px 5px 0 rgba(153, 153, 153, .3);
+}
+
+/* ? Logo */
+.sahabat-karir-logo {
+    width: fit-content;
+}
+
+.sahabat-karir-logo img {
+    width: calc(var(--tinggi-header) - 20px);
+}
+
+/* ? Navigasi */
+.navigasi-halaman-landing {
+    display: flex;
+    align-items: center;
+}
+
+/* ? Pencarian */
+.pencarian svg {
+    width: 20px;
+}
