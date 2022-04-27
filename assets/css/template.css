@@ -90,153 +90,9 @@ header {
 }
 
 /* ----------------------------------------------------------------------------------------------
- * Konten
+ * Footer
  * ----------------------------------------------------------------------------------------------
 */
-/* ? Judul */
-.pembungkus-judul {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.pembungkus-judul h1 {
-    font-family: var(--font-bold);
-    color: #0779e4;
-    margin-bottom: inherit;
-}
-
-.pembungkus-judul p {
-    font-size: 20px;
-    color: #494a4b;
-}
-
-/* ? Jumbotron */
-.pembungkus-jumbotron {
-    position: relative;
-    min-height: fit-content;
-    margin: auto;
-}
-
-.jumbotron {
-    width: 100%;
-    height: inherit;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.jumbotron-slider__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9;
-    width: fit-content;
-}
-
-.jumbotron-slider__arrow img {
-    width: inherit;
-    opacity: .5;
-    transition: opacity .5s;
-    width: 50px;
-}
-
-.jumbotron-slider__arrow img:hover {
-    cursor: pointer;
-    opacity: 1;
-}
-
-.jumbotron-slider__arrow.go-back {
-    left: 10px;
-}
-
-.jumbotron-slider__arrow.go-next {
-    right: 10px;
-}
-
-/* ? Gabung Bersama Kami */
-.gabung-bersama-kami {
-    width: 90%;
-    margin: auto;
-}
-
-.gabung-bersama-kami__slider {
-    min-height: 200px;
-    box-shadow: 0 3px 5px 2px rgba(153, 153, 153, .5);
-    margin: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.konten__gabung-bersama-kami {
-    display: grid;
-    grid-template-rows: 3fr repeat(2, 1fr);
-    height: 100%;
-}
-
-img.konten-logo {
-    height: 100px;
-    width: auto;
-    justify-self: center;
-    padding: 10px 0;
-}
-
-.konten__gabung-bersama-kami h1 {
-    font-family: var(--font-bold);
-    font-size: 20px;
-    align-self: flex-end;
-    color: #0779e4;
-    white-space: nowrap;
-}
-
-.lihat-kelas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.lihat-kelas p {
-    white-space: nowrap;
-}
-
-.lihat-kelas svg {
-    width: 20px;
-    opacity: .7;
-    transition: .3s;
-}
-
-.lihat-kelas svg:hover {
-    opacity: 1;
-}
-
-/* ? Custom slick */
-.slick-dots {
-    position: absolute;
-    bottom: -15%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 10px;
-
-}
-
-.slick-dots .slick-active button {
-    background: rgba(7, 121, 228, .8);
-}
-
-.slick-dots button {
-    font-size: 0;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    border: none;
-}
-
-.slick-dots button:hover {
-    cursor: pointer;
-}
 
 /* ----------------------------------------------------------------------------------------------
  * Desktop
@@ -275,11 +131,6 @@ img.konten-logo {
         background-position-x: left;
         color: #0779e4;
     }
-
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
 }
 
 /* ----------------------------------------------------------------------------------------------
@@ -302,18 +153,6 @@ img.konten-logo {
     /* ? Pencarian */
     .pencarian input {
         border-radius: 10px;
-    }
-
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
-    .pembungkus-jumbotron {
-        width: 80%;
-    }
-
-    .jumbotron img {
-        width: inherit;
     }
 }
 
@@ -346,14 +185,6 @@ img.konten-logo {
     .pencarian {
         order: 2;
         width: 80%;
-    }
-
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
-    .pembungkus-jumbotron {
-        width: 90%;
     }
 }
 
@@ -456,30 +287,4 @@ img.konten-logo {
         grid-area: hamburger;
         justify-self: end;
     }
-
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
-    .jumbotron {
-        --tinggi-jumbotron: 50vw;
-    }
-
-    .pembungkus-jumbotron {
-        width: 95%;
-        height: var(--tinggi-jumbotron);
-    }
-
-    .jumbotron img {
-        height: var(--tinggi-jumbotron);
-    }
-
-    .jumbotron-slider__arrow img {
-        width: 30px;
-    }
 }
-
-/* ----------------------------------------------------------------------------------------------
- * Footer
- * ----------------------------------------------------------------------------------------------
-*/
