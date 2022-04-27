@@ -1,8 +1,9 @@
-/* ----------------------------------------------------------------------------------------------
- * Konten
- * ----------------------------------------------------------------------------------------------
-*/
-/* ? Judul */
+.konten {
+    margin-bottom: 100px !important;
+    margin: auto;
+    box-sizing: border-box;
+}
+
 .pembungkus-judul {
     text-align: center;
     margin-bottom: 24px;
@@ -10,8 +11,8 @@
 
 .pembungkus-judul h1 {
     font-family: var(--font-bold);
-    color: #0779e4;
-    margin-bottom: inherit;
+    color: var(--warna-biru);
+    margin-bottom: 10px;
 }
 
 .pembungkus-judul p {
@@ -19,11 +20,13 @@
     color: #494a4b;
 }
 
-/* ? Jumbotron */
+/* ----------------------------------------------------------------------------------------------
+ * Jumbotron
+ * ----------------------------------------------------------------------------------------------
+*/
 .pembungkus-jumbotron {
     position: relative;
     min-height: fit-content;
-    margin: auto;
 }
 
 .jumbotron {
@@ -61,9 +64,11 @@
     right: 10px;
 }
 
-/* ? Gabung Bersama Kami */
+/* ----------------------------------------------------------------------------------------------
+ * Gabung Bersama Kami
+ * ----------------------------------------------------------------------------------------------
+*/
 .gabung-bersama-kami {
-    width: 90%;
     margin: auto;
 }
 
@@ -93,7 +98,7 @@ img.konten-logo {
     font-family: var(--font-bold);
     font-size: 20px;
     align-self: flex-end;
-    color: #0779e4;
+    color: var(--warna-biru);
     white-space: nowrap;
 }
 
@@ -109,6 +114,7 @@ img.konten-logo {
 
 .lihat-kelas svg {
     width: 20px;
+    fill: var(--warna-biru);
     opacity: .7;
     transition: .3s;
 }
@@ -117,7 +123,10 @@ img.konten-logo {
     opacity: 1;
 }
 
-/* ? Custom slick */
+/* ----------------------------------------------------------------------------------------------
+ * Custom Slick
+ * ----------------------------------------------------------------------------------------------
+*/
 .slick-dots {
     position: absolute;
     bottom: -15%;
@@ -148,6 +157,58 @@ img.konten-logo {
 }
 
 /* ----------------------------------------------------------------------------------------------
+ * Tentang Kami
+ * ----------------------------------------------------------------------------------------------
+*/
+.tentang-kami {
+    background-color: #fff;
+    box-shadow: 0 3px 5px 1px rgba(204, 204, 204, .5);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.konten__tentang-kami {
+    display: flex;
+    position: relative;
+}
+
+.konten__tentang-kami h2 {
+    text-align: center;
+    font-family: var(--font-bold);
+    font-size: 24px;
+    color: var(--warna-biru);
+    border-bottom: 3px solid var(--warna-biru);
+}
+
+.konten__tentang-kami span {
+    display: grid;
+    grid-template-columns: 50px auto;
+    height: 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.konten__tentang-kami span p:first-child {
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.konten__tentang-kami .visi {
+    flex: 1;
+}
+
+.konten__tentang-kami .misi {
+    flex: 1;
+}
+
+/* ----------------------------------------------------------------------------------------------
  * Desktop
  * ----------------------------------------------------------------------------------------------
 */
@@ -158,17 +219,25 @@ img.konten-logo {
  * ----------------------------------------------------------------------------------------------
 */
 @media screen and (min-width:768px) {
-
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
-    .pembungkus-jumbotron {
-        width: 80%;
+    .konten {
+        width: 90%;
     }
 
+    /* * Jumbotron */
     .jumbotron img {
         width: inherit;
+    }
+
+    /* * Konten Tentang Kami */
+    .konten__tentang-kami>div:first-child:after {
+        content: '';
+        background-color: var(--warna-biru);
+        width: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -178,10 +247,7 @@ img.konten-logo {
 */
 @media screen and (min-width:768px) and (max-width:992px) {
 
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
+    /* * Jumbotron */
     .pembungkus-jumbotron {
         width: 90%;
     }
@@ -206,16 +272,16 @@ img.konten-logo {
         font-size: 26px;
     }
 
-    /* ----------------------------------------------------------------------------------------------
-     * Konten
-     * ----------------------------------------------------------------------------------------------
-    */
+    .konten {
+        width: 95%;
+    }
+
+    /* * Jumbotron */
     .jumbotron {
         --tinggi-jumbotron: 50vw;
     }
 
     .pembungkus-jumbotron {
-        width: 95%;
         height: var(--tinggi-jumbotron);
     }
 
@@ -225,5 +291,24 @@ img.konten-logo {
 
     .jumbotron-slider__arrow img {
         width: 30px;
+    }
+
+    /* * Gabung Bersama Kami */
+    .lihat-kelas p {
+        font-size: 12px;
+    }
+
+    /* * Tentang Kami */
+    .konten__tentang-kami {
+        flex-direction: column;
+    }
+
+    .konten__tentang-kami>div {
+        margin-bottom: 50px;
+    }
+
+    .konten__tentang-kami span {
+        font-size: 11px;
+        margin: 20px 0;
     }
 }

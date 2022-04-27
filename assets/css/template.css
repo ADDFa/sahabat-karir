@@ -2,6 +2,8 @@
     --tinggi-header: 80px;
 
     --font-bold: montserrat_alternatesbold;
+
+    --warna-biru: #0779e4;
 }
 
 body {
@@ -77,7 +79,7 @@ header {
 
 .pencarian svg {
     position: absolute;
-    fill: #0779e4;
+    fill: var(--warna-biru);
     width: 20px;
     top: 50%;
     right: 10px;
@@ -129,7 +131,7 @@ header {
     .navigasi-halaman-landing a:hover {
         background-size: 100% 100%;
         background-position-x: left;
-        color: #0779e4;
+        color: var(--warna-biru);
     }
 }
 
@@ -214,6 +216,7 @@ header {
         transition: .3s;
         border-bottom-left-radius: 10px;
         box-shadow: 0 0 5px 0 rgba(153, 153, 153, .5);
+        z-index: 999;
     }
 
     /* Kelas Semu Navigasi */
