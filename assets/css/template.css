@@ -91,33 +91,30 @@ header {
 */
 .pembungkus-jumbotron {
     position: relative;
-    width: 80%;
     min-height: fit-content;
     margin: auto;
 }
 
 .jumbotron {
     width: 100%;
+    height: inherit;
     border-radius: 20px;
     overflow: hidden;
-}
-
-.jumbotron img {
-    width: inherit;
 }
 
 .jumbotron-slider__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
     z-index: 999;
+    width: fit-content;
 }
 
 .jumbotron-slider__arrow img {
     width: inherit;
     opacity: .5;
     transition: opacity .5s;
+    width: 50px;
 }
 
 .jumbotron-slider__arrow img:hover {
@@ -190,6 +187,18 @@ header {
     .pencarian input {
         border-radius: 10px;
     }
+
+    /* ----------------------------------------------------------------------------------------------
+     * Konten
+     * ----------------------------------------------------------------------------------------------
+    */
+    .pembungkus-jumbotron {
+        width: 80%;
+    }
+
+    .jumbotron img {
+        width: inherit;
+    }
 }
 
 /* ----------------------------------------------------------------------------------------------
@@ -221,6 +230,14 @@ header {
     .pencarian {
         order: 2;
         width: 80%;
+    }
+
+    /* ----------------------------------------------------------------------------------------------
+     * Konten
+     * ----------------------------------------------------------------------------------------------
+    */
+    .pembungkus-jumbotron {
+        width: 90%;
     }
 }
 
@@ -280,6 +297,9 @@ header {
  * ----------------------------------------------------------------------------------------------
 */
 @media screen and (max-width:768px) {
+    #halaman-landing {
+        margin-top: 50px;
+    }
 
     /* ----------------------------------------------------------------------------------------------
      * Header
@@ -315,6 +335,27 @@ header {
     .hamburger-navigasi {
         grid-area: hamburger;
         justify-self: end;
+    }
+
+    /* ----------------------------------------------------------------------------------------------
+     * Konten
+     * ----------------------------------------------------------------------------------------------
+    */
+    .jumbotron {
+        --tinggi-jumbotron: 50vw;
+    }
+
+    .pembungkus-jumbotron {
+        width: 95%;
+        height: var(--tinggi-jumbotron);
+    }
+
+    .jumbotron img {
+        height: var(--tinggi-jumbotron);
+    }
+
+    .jumbotron-slider__arrow img {
+        width: 30px;
     }
 }
 
