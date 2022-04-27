@@ -1,3 +1,7 @@
+/* ----------------------------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------------------------
+ */
 // ? Header
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 1) {
@@ -25,4 +29,34 @@ document.addEventListener('click', e => {
     if (!hamburgerNavigasi.contains(e.target)) {
         document.querySelector('.navigasi-halaman-landing').classList.remove('lihat-navigasi')
     }
+})
+
+/* ----------------------------------------------------------------------------------------------
+ * Konten
+ * ----------------------------------------------------------------------------------------------
+ */
+// ? Slick
+$(document).ready(function () {
+    $('.jumbotron-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2500,
+    })
+
+    const arrowSlick = [...document.querySelectorAll('.jumbotron-slider .slick-arrow')]
+    arrowSlick.map(e => {
+        e.style.display = 'none'
+    })
+
+    const jumbotronArrowBack = document.querySelector('.jumbotron-slider__arrow.go-back')
+    const jumbotronArrowNext = document.querySelector('.jumbotron-slider__arrow.go-next')
+    const jumbotronArrow = [...document.querySelectorAll('.jumbotron-slider__arrow')]
+    jumbotronArrow.map(e => {
+        e.addEventListener('click', el => {
+            if (jumbotronArrowBack.contains(el.target)) {
+                document.querySelector('.jumbotron .slick-prev').click()
+            } else if (jumbotronArrowNext.contains(el.target)) {
+                document.querySelector('.jumbotron .slick-next').click()
+            }
+        })
+    })
 })
