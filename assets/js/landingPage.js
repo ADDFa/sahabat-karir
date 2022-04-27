@@ -42,11 +42,6 @@ $(document).ready(function () {
         autoplaySpeed: 2500,
     })
 
-    const arrowSlick = [...document.querySelectorAll('.jumbotron-slider .slick-arrow')]
-    arrowSlick.map(e => {
-        e.style.display = 'none'
-    })
-
     const jumbotronArrowBack = document.querySelector('.jumbotron-slider__arrow.go-back')
     const jumbotronArrowNext = document.querySelector('.jumbotron-slider__arrow.go-next')
     const jumbotronArrow = [...document.querySelectorAll('.jumbotron-slider__arrow')]
@@ -58,5 +53,40 @@ $(document).ready(function () {
                 document.querySelector('.jumbotron .slick-next').click()
             }
         })
+    })
+
+
+
+    // ? Gabung Bersama Kami Slider
+    $('.pembungkus-konten__gabung-bersama-kami').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    })
+
+
+    // ! Menghilangkan tombol prev dan next slick
+    const arrowSlick = [...document.querySelectorAll('.slick-arrow')]
+    arrowSlick.map(e => {
+        e.style.display = 'none'
     })
 })
