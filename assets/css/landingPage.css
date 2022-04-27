@@ -1,3 +1,7 @@
+:root {
+    --shadow-default: 0 3px 5px 2px rgba(153, 153, 153, .5);
+}
+
 .konten {
     margin-bottom: 100px !important;
     margin: auto;
@@ -72,19 +76,13 @@
     margin: auto;
 }
 
-.gabung-bersama-kami__slider {
+.konten__gabung-bersama-kami {
     min-height: 200px;
-    box-shadow: 0 3px 5px 2px rgba(153, 153, 153, .5);
+    box-shadow: var(--shadow-default);
     margin: 20px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-}
-
-.konten__gabung-bersama-kami {
-    display: grid;
-    grid-template-rows: 3fr repeat(2, 1fr);
-    height: 100%;
 }
 
 img.konten-logo {
@@ -162,7 +160,7 @@ img.konten-logo {
 */
 .tentang-kami {
     background-color: #fff;
-    box-shadow: 0 3px 5px 1px rgba(204, 204, 204, .5);
+    box-shadow: var(--shadow-default);
     border-radius: 20px;
     padding: 20px;
 }
@@ -208,6 +206,34 @@ img.konten-logo {
 }
 
 /* ----------------------------------------------------------------------------------------------
+ * Kenapa Harus Kami
+ * ----------------------------------------------------------------------------------------------
+*/
+.pembungkus-konten__kenapa-harus-kami {
+    display: grid;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.kartu {
+    box-shadow: var(--shadow-default);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.kartu img {
+    width: 100%;
+}
+
+.kartu h2 {
+    font-family: var(--font-bold);
+    color: var(--warna-biru);
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+/* ----------------------------------------------------------------------------------------------
  * Desktop
  * ----------------------------------------------------------------------------------------------
 */
@@ -238,6 +264,11 @@ img.konten-logo {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* * Kenapa Harus Kami */
+    .pembungkus-konten__kenapa-harus-kami {
+        grid-template-columns: repeat(3, minmax(180px, 430px));
+    }
 }
 
 /* ----------------------------------------------------------------------------------------------
@@ -249,6 +280,11 @@ img.konten-logo {
     /* * Jumbotron */
     .pembungkus-jumbotron {
         width: 90%;
+    }
+
+    /* * Kenapa Harus Kami */
+    .pembungkus-konten__kenapa-harus-kami {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -313,5 +349,10 @@ img.konten-logo {
     .konten__tentang-kami span {
         font-size: 11px;
         margin: 20px 0;
+    }
+
+    /* * Kenapa Harus Kami */
+    .pembungkus-konten__kenapa-harus-kami {
+        grid-template-columns: 1fr;
     }
 }
