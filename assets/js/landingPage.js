@@ -2,7 +2,7 @@
  * Konten
  * ----------------------------------------------------------------------------------------------
  */
-// ? Slick
+// TODO: Slick
 const slickDefault = function (kelas) {
     $(`.${kelas}`).slick({
         infinite: true,
@@ -51,10 +51,10 @@ $(document).ready(function () {
 
 
 
-    // ? Gabung Bersama Kami Slider
+    // TODO: Gabung Bersama Kami Slider
     slickDefault('pembungkus-konten__gabung-bersama-kami')
 
-    // ? Cerita Dari Sahabat Slider
+    // TODO: Cerita Dari Sahabat Slider
     slickDefault('pembungkus-konten__cerita-dari-sahabat')
 
 
@@ -68,7 +68,7 @@ $(document).ready(function () {
 
 
 
-// ? Rating
+// TODO: Rating
 window.addEventListener('load', () => {
     const rating = [...document.querySelectorAll('.rating')]
 

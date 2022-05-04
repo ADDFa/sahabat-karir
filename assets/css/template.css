@@ -41,12 +41,12 @@ header {
     box-shadow: 0 1px 5px 0 rgba(153, 153, 153, .4);
 }
 
-/* ? Logo */
+/* TODO: Logo */
 .sahabat-karir-logo img {
     height: calc(var(--tinggi-header) - 20px);
 }
 
-/* ? Navigasi */
+/* TODO: Navigasi */
 .navigasi-halaman-landing {
     width: 40%;
     display: flex;
@@ -57,7 +57,7 @@ header {
     margin-right: 20px;
 }
 
-/* ? Pencarian */
+/* TODO: Pencarian */
 .pencarian {
     width: calc(60% - var(--tinggi-header));
     position: relative;
@@ -176,7 +176,7 @@ footer {
      * Header
      * ----------------------------------------------------------------------------------------------
     */
-    /* ? Logo */
+    /* TODO: Logo */
     .sahabat-karir-logo {
         width: var(--tinggi-header);
     }
@@ -185,7 +185,7 @@ footer {
         display: none;
     }
 
-    /* ? Navigasi */
+    /* TODO: Navigasi */
     .navigasi-halaman-landing a {
         background-image: linear-gradient(transparent 0%,
                 transparent 90%,
@@ -230,7 +230,7 @@ footer {
         display: flex;
     }
 
-    /* ? Pencarian */
+    /* TODO: Pencarian */
     .pencarian input {
         border-radius: 10px;
     }
@@ -250,18 +250,18 @@ footer {
         justify-content: space-between;
     }
 
-    /* ? Logo */
+    /* TODO: Logo */
     .sahabat-karir-logo {
         order: 1;
     }
 
-    /* ? Navigasi */
+    /* TODO: Navigasi */
     .navigasi-halaman-landing {
         width: 50%;
         order: 3;
     }
 
-    /* ? Pencarian */
+    /* TODO: Pencarian */
     .pencarian {
         order: 2;
         width: 80%;
@@ -287,7 +287,7 @@ footer {
      * Header
      * ----------------------------------------------------------------------------------------------
     */
-    /* ? Navigasi */
+    /* TODO: Navigasi */
     .navigasi-halaman-landing {
         height: 0;
         position: absolute;
@@ -317,7 +317,7 @@ footer {
         width: fit-content;
     }
 
-    /* ? Hamburger Navigasi */
+    /* TODO: Hamburger Navigasi */
     .hamburger-navigasi {
         display: initial;
         order: 4;
@@ -354,12 +354,12 @@ footer {
         ;
     }
 
-    /* ? Logo */
+    /* TODO: Logo */
     .sahabat-karir-logo {
         grid-area: logo;
     }
 
-    /* ? Pencarian */
+    /* TODO: Pencarian */
     .pencarian {
         width: 80%;
         grid-area: pencarian;
@@ -367,12 +367,12 @@ footer {
         margin-top: 10px;
     }
 
-    /* ? Navigasi */
+    /* TODO: Navigasi */
     .navigasi-halaman-landing {
         width: 80%;
     }
 
-    /* ? Hamburger Navigasi */
+    /* TODO: Hamburger Navigasi */
     .hamburger-navigasi {
         grid-area: hamburger;
         justify-self: end;
