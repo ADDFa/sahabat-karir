@@ -13,41 +13,28 @@ function Rp(nilai) {
     return rupiah
 }
 
-// TODO: Header
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 1) {
-        document.querySelector('header').classList.add('header-shadow')
-    } else {
-        document.querySelector('header').classList.remove('header-shadow')
-    }
-})
-
 // TODO: Total
-window.addEventListener('load', () => {
-    const pHarga = [...document.querySelectorAll('.harga')]
-    const pTotal = [...document.querySelectorAll('p.total')]
+const pSubTotal = [...document.querySelectorAll('p.sub-total')]
+const pTotalTagihan = document.querySelector('p.total-tagihan')
+const harga = [...document.querySelectorAll('span.harga')]
+let biayaAdmin = document.querySelector('span.biaya-admin').innerText
+biayaAdmin = parseInt(biayaAdmin.split('.').join(''))
 
-    const total = pHarga.map((e) => {
-        let harga = (e.innerText).split('.')
-        harga = harga.join('')
-        harga = parseInt(harga)
+const total = harga.map((e) => {
+    let harga = (e.innerText).split('.')
+    harga = harga.join('')
+    harga = parseInt(harga)
 
-        return harga
-    })
+    return harga
+}).reduce((accu, curr) => accu + curr)
 
-    let i = 0,
-        subTotal = 0
+const totalTagihan = total + biayaAdmin
 
-    while (i < total.length) {
-        subTotal += total[i]
+// TODO: Masukkan Total kedalam element pTotal
+pSubTotal.map(e => e.innerText = `Rp. ${Rp(total)}`)
 
-        i++
-    }
-
-    pTotal.map(e => {
-        e.innerText = Rp(subTotal)
-    })
-})
+// TODO: Masukkan Total Tagihan kedalam element pTotalTagihan
+pTotalTagihan.innerText = `Rp. ${Rp(totalTagihan)}`
 
 document.querySelector('input').addEventListener('input', e => {
     if (e.target.checked == true) {

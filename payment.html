@@ -11,7 +11,6 @@
     <link rel="shortcut icon" href="assets/img/icon/logo-sk.png">
 
     <!-- --------------- css --------------- -->
-    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/payment.css">
 </head>
 
@@ -24,119 +23,142 @@
     </header>
 
     <form action="" id="payment" method="POST">
-        <div class="list-kelas">
-            <div class="checkout">
-                <h1>Checkout</h1>
-            </div>
-
-            <div class="kelas">
-                <img src="" alt="" class="icon__kelas">
-
-                <div class="paket">
-                    <p class="nama-kelas"></p>
-
-                    <span class="jenis-harga">
-                        <p class="jenis">Paket Kilat</p>
-                        <p class="harga">129.900</p>
-                    </span>
-
-                    <span>
-                        <input type="checkbox" checked name="paket<?= $i ?>" value="129.900">
-                    </span>
-                </div>
-            </div>
-
-            <div class="kelas">
-                <img src="" alt="" class="icon__kelas">
-
-                <div class="paket">
-                    <p class="nama-kelas"></p>
-
-                    <span class="jenis-harga">
-                        <p class="jenis">Paket Kilat</p>
-                        <p class="harga">129.900</p>
-                    </span>
-
-                    <span>
-                        <input type="checkbox" checked name="paket<?= $i ?>" value="129.900">
-                    </span>
-                </div>
-            </div>
-
-            <div class="kelas">
-                <img src="" alt="" class="icon__kelas">
-
-                <div class="paket">
-                    <p class="nama-kelas"></p>
-
-                    <span class="jenis-harga">
-                        <p class="jenis">Paket Kilat</p>
-                        <p class="harga">129.900</p>
-                    </span>
-
-                    <span>
-                        <input type="checkbox" checked name="paket<?= $i ?>" value="129.900">
-                    </span>
-                </div>
-            </div>
-
-            <div class="kelas">
-                <img src="" alt="" class="icon__kelas">
-
-                <div class="paket">
-                    <p class="nama-kelas"></p>
-
-                    <span class="jenis-harga">
-                        <p class="jenis">Paket Kilat</p>
-                        <p class="harga">129.900</p>
-                    </span>
-
-                    <span>
-                        <input type="checkbox" checked name="paket<?= $i ?>" value="129.900">
-                    </span>
-                </div>
-            </div>
-
-            <div class="kelas">
-                <img src="" alt="" class="icon__kelas">
-
-                <div class="paket">
-                    <p class="nama-kelas"></p>
-
-                    <span class="jenis-harga">
-                        <p class="jenis">Paket Kilat</p>
-                        <p class="harga">129.900</p>
-                    </span>
-
-                    <span>
-                        <input type="checkbox" checked name="paket<?= $i ?>" value="129.900">
-                    </span>
-                </div>
-            </div>
-
-            <div class="total">
-                <h1>Sub Total</h1>
-                <p class="total"></p>
-            </div>
+        <div class="heading">
+            <h1>Checkout</h1>
         </div>
 
-        <div class="pembayaran">
-            <h1>Ringkasan Belanja</h1>
+        <div class="checkout">
+            <div class="list-kelas">
+                <div class="_kelas">
+                    <div class="kelas">
+                        <img src="assets/img/landingPage/polri.png" alt="kelas" class="icon__kelas">
 
-            <div class="ringkasan">
-                <div class="total">
-                    <span>
-                        <p>Total Harga</p>
-                        <p class="total"></p>
-                    </span>
-                    <span>
-                        <p>Biaya Admin</p>
-                        <p>Rp. 3000</p>
-                    </span>
+                        <div class="paket">
+                            <p class="nama-kelas">Kelas SBMPTN</p>
+
+                            <span class="jenis-harga">
+                                <p class="jenis">Paket Kilat</p>
+                                <p class="harga">
+                                    <span>Rp. </span><span class="harga">129.900</span>
+                                </p>
+                            </span>
+                        </div>
+
+                        <span class="ckeckbox">
+                            <input type="checkbox" checked name="paket1" value="129.900">
+                        </span>
+                    </div>
+
+                    <div class="kelas">
+                        <img src="assets/img/landingPage/polri.png" alt="kelas" class="icon__kelas">
+
+                        <div class="paket">
+                            <p class="nama-kelas">Kelas SBMPTN</p>
+
+                            <span class="jenis-harga">
+                                <p class="jenis">Paket Kilat</p>
+                                <p class="harga">
+                                    <span>Rp. </span><span class="harga">129.900</span>
+                                </p>
+                            </span>
+                        </div>
+
+                        <span class="ckeckbox">
+                            <input type="checkbox" checked name="paket1" value="129.900">
+                        </span>
+                    </div>
+
+                    <div class="kelas">
+                        <img src="assets/img/landingPage/polri.png" alt="kelas" class="icon__kelas">
+
+                        <div class="paket">
+                            <p class="nama-kelas">Kelas SBMPTN</p>
+
+                            <span class="jenis-harga">
+                                <p class="jenis">Paket Kilat</p>
+                                <p class="harga">
+                                    <span>Rp. </span><span class="harga">129.900</span>
+                                </p>
+                            </span>
+                        </div>
+
+                        <span class="ckeckbox">
+                            <input type="checkbox" checked name="paket1" value="129.900">
+                        </span>
+                    </div>
+
+                    <div class="kelas">
+                        <img src="assets/img/landingPage/polri.png" alt="kelas" class="icon__kelas">
+
+                        <div class="paket">
+                            <p class="nama-kelas">Kelas SBMPTN</p>
+
+                            <span class="jenis-harga">
+                                <p class="jenis">Paket Kilat</p>
+                                <p class="harga">
+                                    <span>Rp. </span><span class="harga">129.900</span>
+                                </p>
+                            </span>
+                        </div>
+
+                        <span class="ckeckbox">
+                            <input type="checkbox" checked name="paket1" value="129.900">
+                        </span>
+                    </div>
+
+                    <div class="kelas">
+                        <img src="assets/img/landingPage/polri.png" alt="kelas" class="icon__kelas">
+
+                        <div class="paket">
+                            <p class="nama-kelas">Kelas SBMPTN</p>
+
+                            <span class="jenis-harga">
+                                <p class="jenis">Paket Kilat</p>
+                                <p class="harga">
+                                    <span>Rp. </span><span class="harga">129.900</span>
+                                </p>
+                            </span>
+                        </div>
+
+                        <span class="ckeckbox">
+                            <input type="checkbox" checked name="paket1" value="129.900">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sub-total">
+                    <h1>Sub Total</h1>
+                    <p class="sub-total"></p>
                 </div>
             </div>
 
-            <button type="submit" name="kirim">Pilih Pembayaran</button>
+            <div class="pembayaran">
+                <div class="heading__pembayaran">
+                    <h1>Ringkasan Belanja</h1>
+                </div>
+
+                <div class="ringkasan">
+                    <div class="total">
+                        <span>
+                            <p>Total Harga</p>
+                            <p class="sub-total"></p>
+                        </span>
+                        <span>
+                            <p>Biaya Admin</p>
+                            <p><span>Rp. </span><span class="biaya-admin">3000</span></p>
+                        </span>
+                    </div>
+
+                    <div class="total-tagihan">
+                        <p>Total Tagihan</p>
+                        <p class="total-tagihan"></p>
+                    </div>
+                </div>
+
+                <div class="metode-pembayaran">
+                    <button class="tombol" type="submit" name="kirim">Pilih Pembayaran</button>
+                </div>
+            </div>
         </div>
     </form>
 

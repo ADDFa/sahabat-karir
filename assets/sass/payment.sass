@@ -3,6 +3,34 @@
 $tinggi-header: 80px
 $font-bold: montserrat_alternatesbold
 $warna-biru: #0779e4
+$shadow-light: 0 2px 5px 1px #ccc
+
+@mixin tombol
+    margin: 0 auto
+    width: fit-content
+    height: fit-content
+    padding: 1em 2em
+    border-radius: 5px
+    background-color: #1A8DF8
+    border: none
+    color: #fff
+    font-size: 1.4rem
+    transition: 300ms
+
+    &:hover
+        cursor: pointer
+        background-color: $warna-biru
+
+@mixin heading($bottom: true)
+    margin-bottom: 2.5em
+    padding: 2em 0
+
+    @if ($bottom)
+        border-bottom: 5px solid #eaeaea
+
+    & h1
+        font-size: 2.5rem
+        font-weight: bold
 
 html
     font-size: 10px
@@ -10,7 +38,6 @@ html
 body
     max-width: 1920px
     margin: auto
-    height: 2000px
 
 // TODO: Header
 #halaman-landing
@@ -26,12 +53,10 @@ header
     top: 0
     transition: .3s
     align-items: center
-    padding: 10px
+    padding: 1em
     box-sizing: border-box
     background-color: #fff
     z-index: 99
-
-.header-shadow
     box-shadow: 0 1px 5px 0 rgba(153, 153, 153, .4)
 
 // TODO: Logo
@@ -46,3 +71,115 @@ header
     h2
         font-size: 2.8rem
         font-weight: bold
+        color: $warna-biru
+
+// TODO: Payment
+#payment
+    width: 80%
+    height: 70vh
+    margin: auto
+
+.heading
+    @include heading
+
+.checkout
+    height: 100%
+    display: flex
+    gap: 2rem
+
+// TODO: Kelas
+.list-kelas
+    flex: 2
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+._kelas
+    overflow-y: auto
+
+div.sub-total
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 3em
+
+    h1
+        font-size: 2rem
+        font-weight: bold
+
+    p.sub-total
+        font-size: 1.4rem
+        font-weight: bold
+
+.kelas
+    margin: 0 2em
+    display: flex
+    align-items: center
+    margin-bottom: 2em
+    padding: 3em 2em
+    box-shadow: $shadow-light
+    border-radius: 10px
+
+    img
+        width: 100px
+
+    .paket
+        flex: 1
+
+    .nama-kelas
+        font-weight: 600
+        font-size: 1.6rem
+
+    .jenis-harga>p
+        font-size: 1.2rem
+
+    p.harga
+        color: #FF4949
+
+    .checkbox
+        width: fit-content
+        padding: 0 2rem
+
+// TODO: Pembayaran
+.pembayaran
+    flex: 1
+    display: flex
+    flex-direction: column
+    box-shadow: $shadow-light
+    border-radius: 10px
+    padding: 2em
+    box-sizing: border-box
+
+    p
+        font-size: 1.6rem
+        font-weight: 500
+
+    .heading__pembayaran
+        @include heading(false)
+        text-align: center
+        height: 50px
+
+    .ringkasan div.total
+        border-bottom: 3px solid #eaeaea
+        margin-bottom: 2em
+
+        &>span
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 2em
+
+    .ringkasan div.total-tagihan
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 2em
+
+    .metode-pembayaran
+        display: flex
+        flex: 1
+        justify-content: center
+        align-items: end
+
+        .tombol
+            @include tombol
