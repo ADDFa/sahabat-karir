@@ -83,16 +83,18 @@ header
     @include heading
 
 .checkout
-    height: 100%
     display: flex
+    flex-wrap: wrap
     gap: 2rem
+    height: 100%
 
 // TODO: Kelas
 .list-kelas
-    flex: 2
+    flex: 2 2 500px
     display: flex
     flex-direction: column
     justify-content: space-between
+    height: 100%
 
 ._kelas
     overflow-y: auto
@@ -142,7 +144,7 @@ div.sub-total
 
 // TODO: Pembayaran
 .pembayaran
-    flex: 1
+    flex: 1 1 350px
     display: flex
     flex-direction: column
     box-shadow: $shadow-light
@@ -183,3 +185,20 @@ div.sub-total
 
         .tombol
             @include tombol
+
+// TODO: Dekstop
+@media screen and (min-width: 992px)
+
+// TODO: Desktop dan Tab
+@media screen and (min-width: 768px)
+
+// TODO: Tab
+@media screen and (max-width: 992px) and (min-width: 768px)
+
+// TODO: Tab dan Mobile
+@media screen and (max-width: 992px)
+    #payment .checkout
+        margin-bottom: 5em !important
+
+// TODO: Mobile
+@media screen and (max-width: 768px)
